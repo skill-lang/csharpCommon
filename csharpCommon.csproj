@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B2ECE684-A9AC-47E9-BC52-B2955B7F632E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>csharpCommon</RootNamespace>
+    <AssemblyName>skill.csharp.common</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\api\Access.cs" />
+    <Compile Include="src\api\FieldDeclaration.cs" />
+    <Compile Include="src\api\FieldType.cs" />
+    <Compile Include="src\api\GeneralAccess.cs" />
+    <Compile Include="src\api\IAccess.cs" />
+    <Compile Include="src\api\IGeneralAccess.cs" />
+    <Compile Include="src\api\SkillException.cs" />
+    <Compile Include="src\api\SkillFile.cs" />
+    <Compile Include="src\api\StringAccess.cs" />
+    <Compile Include="src\internal\AbstractFieldDeclaration.cs" />
+    <Compile Include="src\internal\AbstractStoragePool.cs" />
+    <Compile Include="src\internal\BasePool.cs" />
+    <Compile Include="src\internal\DistributedField.cs" />
+    <Compile Include="src\internal\DynamicDataIterator.cs" />
+    <Compile Include="src\internal\DynamicNewInstancesIterator.cs" />
+    <Compile Include="src\internal\exceptions\InvalidPoolIndexException.cs" />
+    <Compile Include="src\internal\exceptions\ParseException.cs" />
+    <Compile Include="src\internal\exceptions\PoolSizeMissmatchError.cs" />
+    <Compile Include="src\internal\exceptions\TypeMissmatchError.cs" />
+    <Compile Include="src\internal\FieldDeclaration.cs" />
+    <Compile Include="src\internal\fieldDeclarations\AutoField.cs" />
+    <Compile Include="src\internal\fieldDeclarations\IAutoField.cs" />
+    <Compile Include="src\internal\fieldDeclarations\IgnoredField.cs" />
+    <Compile Include="src\internal\fieldDeclarations\InterfaceField.cs" />
+    <Compile Include="src\internal\fieldDeclarations\KnownField.cs" />
+    <Compile Include="src\internal\FieldIterator.cs" />
+    <Compile Include="src\internal\FieldType.cs" />
+    <Compile Include="src\internal\fieldTypes\Annotation.cs" />
+    <Compile Include="src\internal\fieldTypes\BoolType.cs" />
+    <Compile Include="src\internal\fieldTypes\CompoundType.cs" />
+    <Compile Include="src\internal\fieldTypes\ConstantI16.cs" />
+    <Compile Include="src\internal\fieldTypes\ConstantI32.cs" />
+    <Compile Include="src\internal\fieldTypes\ConstantI64.cs" />
+    <Compile Include="src\internal\fieldTypes\ConstantI8.cs" />
+    <Compile Include="src\internal\fieldTypes\ConstantIntegerType.cs" />
+    <Compile Include="src\internal\fieldTypes\ConstantLengthArray.cs" />
+    <Compile Include="src\internal\fieldTypes\ConstantV64.cs" />
+    <Compile Include="src\internal\fieldTypes\F32.cs" />
+    <Compile Include="src\internal\fieldTypes\F64.cs" />
+    <Compile Include="src\internal\fieldTypes\FloatType.cs" />
+    <Compile Include="src\internal\fieldTypes\I16.cs" />
+    <Compile Include="src\internal\fieldTypes\I32.cs" />
+    <Compile Include="src\internal\fieldTypes\I64.cs" />
+    <Compile Include="src\internal\fieldTypes\I8.cs" />
+    <Compile Include="src\internal\fieldTypes\IConstantIntegerType.cs" />
+    <Compile Include="src\internal\fieldTypes\IConstantLengthArray.cs" />
+    <Compile Include="src\internal\fieldTypes\IListType.cs" />
+    <Compile Include="src\internal\fieldTypes\IMapType.cs" />
+    <Compile Include="src\internal\fieldTypes\IntegerType.cs" />
+    <Compile Include="src\internal\fieldTypes\ISetType.cs" />
+    <Compile Include="src\internal\fieldTypes\ISingleArgumentType.cs" />
+    <Compile Include="src\internal\fieldTypes\IVariableLengthArray.cs" />
+    <Compile Include="src\internal\fieldTypes\ListType.cs" />
+    <Compile Include="src\internal\fieldTypes\MapType.cs" />
+    <Compile Include="src\internal\fieldTypes\ReferenceType.cs" />
+    <Compile Include="src\internal\fieldTypes\SetType.cs" />
+    <Compile Include="src\internal\fieldTypes\SingleArgumentType.cs" />
+    <Compile Include="src\internal\fieldTypes\StringType.cs" />
+    <Compile Include="src\internal\fieldTypes\V64.cs" />
+    <Compile Include="src\internal\fieldTypes\VariableLengthArray.cs" />
+    <Compile Include="src\internal\FileParser.cs" />
+    <Compile Include="src\internal\IBasePool.cs" />
+    <Compile Include="src\internal\IDynamicDataIterator.cs" />
+    <Compile Include="src\internal\IInterfacePool.cs" />
+    <Compile Include="src\internal\ILazyField.cs" />
+    <Compile Include="src\internal\InterfaceIterator.cs" />
+    <Compile Include="src\internal\InterfacePool.cs" />
+    <Compile Include="src\internal\IUnrootedInterfacePool.cs" />
+    <Compile Include="src\internal\KnownDataField.cs" />
+    <Compile Include="src\internal\LazyField.cs" />
+    <Compile Include="src\internal\NamedType.cs" />
+    <Compile Include="src\internal\parts\Block.cs" />
+    <Compile Include="src\internal\parts\BulkChunk.cs" />
+    <Compile Include="src\internal\parts\Chunk.cs" />
+    <Compile Include="src\internal\parts\SimpleChunk.cs" />
+    <Compile Include="src\internal\SerializationFunctions.cs" />
+    <Compile Include="src\internal\SkillObject.cs" />
+    <Compile Include="src\internal\SkillState.cs" />
+    <Compile Include="src\internal\StateAppender.cs" />
+    <Compile Include="src\internal\StateWriter.cs" />
+    <Compile Include="src\internal\StaticDataIterator.cs" />
+    <Compile Include="src\internal\StaticFieldIterator.cs" />
+    <Compile Include="src\internal\StoragePool.cs" />
+    <Compile Include="src\internal\StringPool.cs" />
+    <Compile Include="src\internal\TypeHierarchyIterator.cs" />
+    <Compile Include="src\internal\TypeOrderIterator.cs" />
+    <Compile Include="src\internal\UnrootedInterfacePool.cs" />
+    <Compile Include="src\restrictions\FieldRestriction.cs" />
+    <Compile Include="src\restrictions\IFieldRestriction.cs" />
+    <Compile Include="src\restrictions\NonNull.cs" />
+    <Compile Include="src\restrictions\Range.cs" />
+    <Compile Include="src\restrictions\TypeRestriction.cs" />
+    <Compile Include="src\streams\FileInputStream.cs" />
+    <Compile Include="src\streams\FileOutputStream.cs" />
+    <Compile Include="src\streams\InStream.cs" />
+    <Compile Include="src\streams\MappedInStream.cs" />
+    <Compile Include="src\streams\MappedOutStream.cs" />
+    <Compile Include="src\streams\OutStream.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
